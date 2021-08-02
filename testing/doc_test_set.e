@@ -11,7 +11,12 @@ class
 	DOC_TEST_SET
 
 inherit
-	EQA_TEST_SET
+	TEST_SET_SUPPORT
+
+	STAN_DOC_CYCLE_BDD_ANY
+		undefine
+			default_create
+		end
 
 feature -- Test routines
 

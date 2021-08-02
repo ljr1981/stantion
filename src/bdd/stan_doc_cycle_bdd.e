@@ -5,6 +5,9 @@ note
 
 deferred class
 	STAN_DOC_CYCLE_BDD
+
+inherit
+	STAN_DOC_CYCLE_BDD_ANY
 	
 feature -- Access
 
@@ -30,7 +33,7 @@ feature -- Status Reports
 
 feature -- Basic Operations
 
-	build_STAN_DOC_CYCLE  
+	build_STAN_DOC_CYCLE
 			-- Build a STAN_DOC_CYCLE.
 		require
 			not has_STAN_DOC_CYCLE   -- Do we have STAN_DOC_CYCLE

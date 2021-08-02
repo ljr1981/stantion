@@ -15,6 +15,7 @@
 		<setting name="total_order_on_reals" value="false"/>
 		<setting name="dead_code_removal" value="feature"/>
 		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="diff" location="$ISE_LIBRARY\library\diff\diff.ecf"/>
 		<cluster name="src" location=".\src\" recursive="true"/>
 	</target>
 	<target name="stantion_tests" extends="stantion">
@@ -27,4 +28,3 @@
 		<cluster name="test" location=".\testing\" recursive="true"/>
 	</target>
 </system>
-
