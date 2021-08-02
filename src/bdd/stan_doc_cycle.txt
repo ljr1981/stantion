@@ -1,0 +1,16 @@
+Title: 'Documenting a Simplistic Monte Carlo Simulation Engine for Eiffel.'
+        <STAN_DOC_CYCLE>
+        
+Feature: ['
+
+Build a STAN_DOC_CYCLE
+
+']
+
+Scenario: 'Build a STAN_DOC_CYCLE.'
+          [build_STAN_DOC_CYCLE]
+  Given: 'Do we have STAN_DOC_CYCLE' 
+          ?has_STAN_DOC_CYCLE:False?
+  When: 'asked to build a STAN_DOC_CYCLE.'
+  Then: 'Did we produce a STAN_DOC_CYCLE.' 
+          ?is_STAN_DOC_CYCLE_produced:True?
