@@ -1,0 +1,70 @@
+PURPOSE: This material is letting my hair down and just blathering on paper.
+REAL PURPOSE: To collect my thoughts before I set out building BDD FP spec.
+
+GUESS: I am initially guessing that there are 5-10 specs, but upon refelction I think I am wrong and there are more like 15-20. At the rate of about 3 specs/week (1/2 Namcook rate), that means I am somewhere between 2 and 8 weeks from having a working Monte Carlo Simulation Engine.
+
+FOUND THIS:
+===========
+Then every once in a while, an inventor demonstrates astonishing ability at the game of trial and error. Nobel laureate Richard Feynman, the legendary wild child of physics, was so facile at solving problems that his colleagues distilled his creative prowess to a formula:
+
+1. Write down the problem.
+2. Think very hard.
+3. Write the answer.
+
+But this tongue-in-cheek Feynman Formula neglects a key element of invention success--failure. Nature, the toddler, Feynman, and all creators fail. They fail so often that it's tempting to measure creative performance by the number of failures one has chalked up. In other words, if you're not failing, you're just not trying hard enough.
+
+Or in Feynman's own words, "In order to succeed I try to fail as fast as I can."
+===========
+
+THE PROCESS: What do I think I know so far?
+============
+
+1. Take note of what I am uncertain of.
+2. Think about what I can observe to clear some of that up.
+3. Make some test observations.
+4. Pick out some variables from the observed "stuff".
+5. Identify a "kind" for each variable (continuous/discrete/nominal/ordinal)
+6. Best Guess the range of each on X/Y graph.
+7. Best Guess a distribution model.
+8. Best Guess at how the variables relate to each other and on what basis.
+9. Best Guess at a formula or algorithm that best matches these relationships.
+10. Run that through the Monte Carlo Simulation Engine (TBD).
+11. Best Guess at a distribution model for the answer.
+12. Best Guess at the interpretation of the answer.
+
+BDD FP SPEC GUESSES: Anything "buildable" up there?
+===================
+
+Where: STAN = Supplier, and programmer = Client
+
+#1-4 CLIENT: are very manual. I don't think STAN cares about them. Nothing to do or see here.
+#5 STAN: Might have some classes for STAN_VARIABLE? or STAN_VARIABLE_CLASS?
+#6 STAN: This seems to fold into STAN_VARIABLE.
+#7 STAN: Will most certainly have classes for various "stock" STAN_DISTRIBUTION_MODEL
+#8 STAN: ??? Are there rules of thumb for how variables relate to each other?
+    (remember--I am the "non-math guy")
+#9 CLIENT: Formulae and Algorithms I do not think are a part of STAN but of its Client.
+    (i.e. Client can provide an Llamba-agent for the variables)
+#10-11 CLIENT: ??? What the Client does with the MCSE "Stantion" library.
+
+INIT BDD SPEC LIST:
+===================
+1. STAN_VARIABLE "stuff" (input/process/output) = 3
+2. STAN_DISTRIBUTION "stuff" (IPO) = 3
+3. STAN_VARIABLE_RELATIONS "stuff" ??? (IPO) = 3
+
+So far, a possible 6-9 BDD FP specifications to write?
+
+VARIABLE RELATIONSHIPS: Dependent/Independent
+=======================
+Dependent: a variable (often denoted by y ) whose value depends on that of another.
+
+Independent: a variable (often denoted by x ) whose variation does not depend on that of another.
+
+What is variable correlation?
+-----------------------------
+The statistical relationship between two variables is referred to as their correlation. A correlation could be positive, meaning both variables move in the same direction, or negative, meaning that when one variable's value increases, the other variables' values decrease.
+
+https://en.wikipedia.org/wiki/Correlation
+
+
