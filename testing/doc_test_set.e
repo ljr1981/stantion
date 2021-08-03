@@ -25,9 +25,10 @@ feature -- Test routines
 		note
 			testing:  "execution/isolated", "execution/serial"
 		local
-			l_stan: STAN_DOC_CYCLE_BDD_ANY
+			l_stan: STAN_DOC_CYCLE
 		do
 			create l_stan
+			l_stan.build_stan_doc_cycle
 		end
 
 end
