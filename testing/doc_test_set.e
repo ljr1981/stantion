@@ -24,11 +24,8 @@ feature -- Test routines
 			-- New test routine
 		note
 			testing:  "execution/isolated", "execution/serial"
-		local
-			l_stan: STAN_DOC_CYCLE
 		do
-			create l_stan
-			l_stan.build_stan_doc_cycle
+			(create {STAN_DOC_CYCLE}).build_stan_doc_cycle
 		end
 
 end
